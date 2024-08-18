@@ -1,0 +1,93 @@
+/* Basic reset */
+body, ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Body background */
+body {
+  background-image: url('https://images.unsplash.com/photo-1547045662-456333d35752?fit=crop&w=1350&q=80');
+  background-size: cover;
+  background-position: center;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Stopwatch container */
+.stopwatch-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Stopwatch display */
+.stopwatch-display {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+/* Buttons */
+.btn {
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  font-size: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.btn:active {
+  background-color: #003f7f;
+  transform: scale(0.95);
+}
+
+/* Lap list */
+.laps-list {
+  list-style: none;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.laps-list li {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.laps-list li:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #007BFF;
+}
+
+/* Animation for stopwatch numbers */
+@keyframes blink {
+  0% { color: #333; }
+  50% { color: #007BFF; }
+  100% { color: #333; }
+}
+
+.stopwatch-display.active {
+  animation: blink 1s infinite;
+}
